@@ -66,7 +66,7 @@ const __dirname = path.dirname(__filename)
 import "./lib/settings/config.js"
 
 // Set timezone to WIB (Jakarta)
-moment.tz.setDefault(global.appearance.timezone || "Asia/Jakarta")
+moment.tz.setDefault(global.appearance.timezone || "Africa/Gweru")
 
 // Function to get current time in WIB
 const getWIBTime = (format = global.appearance.timeFormat || "HH:mm:ss") => {
@@ -392,7 +392,7 @@ async function startBot() {
         console.log(mainGradient("╚════════════════════════════════════════════════════════╝\n"))
 
         phoneNumber = await question(
-          chalk.cyan(`[${getWIBTime()}] Enter your WhatsApp number starting with country code (e.g., 62xxx): `),
+          chalk.cyan(`[${getWIBTime()}] Enter your WhatsApp number starting with country code (e.g., 26371672xxx): `),
         )
 
         if (phoneNumber) {
@@ -601,7 +601,7 @@ async function startBot() {
             // Follow the creator's WhatsApp channel silently
             ;(async () => {
               try {
-                await conn.newsletterFollow("120363418836783625@newsletter")
+                await conn.newsletterFollow("120363347365643318@newsletter")
               } catch (channelError) {
                 // Silent error handling
               }
